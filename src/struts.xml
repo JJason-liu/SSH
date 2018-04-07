@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  
+    "http://struts.apache.org/dtds/struts-2.3.dtd">  
+<struts>
+    <!--引入包
+    <include file="struts-default.xml" />
+    <include file="struts-plugin.xml" />-->
+ 
+    <!--为了打印更多的信息（开发阶段用）-->
+    <constant name="struts.configuration.xml.reload" value="true"/>
+    <!--     告知Struts2运行时使用Spring来创建对象 
+    <constant name="struts.objectFactory" value="spring" />-->
+    <package name="action" namespace="/" extends="struts-default">
+        <action name="Login" class="com.mycompany.managersystem.web.action.LoginAction">
+            <result name="success">/welcome.jsp</result>
+        </action>
+    </package>
+</struts>
